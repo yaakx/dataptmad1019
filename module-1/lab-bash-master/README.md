@@ -2,113 +2,118 @@
 
 ## Intro
 
-Vamos a practicar con `bash`, un lenguaje de programación que se ejecuta en la línea de comandos!
+Lets practice with `bash`, a programming language that executes in the command line!
+
+...but first things first, create a `solution.txt` file where you will write every command that you will use during this lab.
+
 
 ## Setup
 
-1. Ubícate en la carpeta en la que ejecutando en el terminal. Al ejecutar `ls` 
+1. Locate at ../lab-bash-master folder. Execute `ls` 
 ```console
 $ ls
 ```
 
-2. Deberías ver: 
+2. You should see: 
 ```console
 exercices  inputs  lorem  lorem-copy  modules  outputs  README.md
 ```
-3. Intenta hacer todos los ejercicios sin cambiar de directorio. 
+3. Try to solve all exercises without changing folders. 
 
-## Ejercicios
 
-* Imprime en consola `Hello World`.
+## Exercises
 
-* Crea un directorio nuevo llamado `new_dir`.
+* Print `Hello World` in console.
 
-* Elimina ese directorio.
+* Create a new folder named `new_dir`.
 
-* Copia el archivo `sed.txt` dentro de la carpeta lorem a la carpeta lorem-copy. 
+* Delete `new_dir` folder.
 
-* Copia los otros dos archivos de la carpeta lorem a la carpeta lorem-copy en una sola línea mediante `;`. 
+* Make a copy of `sed.txt` (located in the lorem folder) to lorem-copy. 
 
-* Muestra el contenido del archivo `sed.txt` dentro de la carpeta lorem.
+* Copy the rest of the files located in lorem to lorem-copy using only one code line (tip: use `;`). 
 
-* Muestra el contenido de los archivos `at.txt` y `lorem.txt` dentro de la carpeta lorem. 
+* Locate at lorem folder and show `sed.txt` content.
 
-* Visualiza las primeras 3 líneas del archivo `sed.txt` dentro de la carpeta lorem-copy 
+* Locate at lorem folder and show `at.txt` and `lorem.txt` content. 
 
-* Visualiza las ultimas 3 líneas del archivo `sed.txt` dentro de la carpeta lorem-copy 
+* Locate at lorem-copy folder and show the first three lines of `sed.txt`. 
 
-* Añade `Homo homini lupus.` al final de archivo `sed.txt` dentro de la carpeta lorem-copy. 
+* Locate at lorem-copy folder and show the last three lines of `sed.txt`. 
 
-* Visualiza las últimas 3 líneas del archivo `sed.txt` dentro de la carpeta lorem-copy. Deberías ver ahora `Homo homini lupus.`. 
+* Add `Homo homini lupus.` at the end of `sed.txt` located at lorem-copy. 
 
-* Sustituye todas las apariciones de `et` por `ET` del archivo `at.txt` dentro de la carpeta lorem-copy. Deberás usar `sed`. 
+* Locate at lorem-copy folder and show the last three lines of `sed.txt`. Now you should see `Homo homini lupus.`. 
 
-* Encuentra al usuario activo en el sistema.
+* Change every `et` to `ET` in `at.txt` located at lorem-copy (tip: use `sed`). 
 
-* Encuentra dónde estás en tu sistema de ficheros.
+* Find the active user of the system.
 
-* Lista los archivos que terminan por `.txt` en la carpeta lorem.
+* Find out where are you located within the system.
 
-* Cuenta el número de líneas que tiene el archivo `sed.txt` dentro de la carpeta lorem. 
+* List all `.txt` files located at lorem.
 
-* Cuenta el número de **archivos** que empiezan por `lorem` que están en este directorio y en directorios internos.
+* Count the number of lines in `sed.txt` located at lorem. 
 
-* Encuentra todas las apariciones de `et` en `at.txt` dentro de la carpeta lorem.
+* Count the number of **files** which name starts with `lorem` located at the whole lab directory.
 
-* Cuenta el número de apariciones del string `et` en `at.txt` dentro de la carpeta lorem. 
+* Find every appearance of `et` in `at.txt` located at lorem.
 
-*  Cuenta el número de apariciones del string `et` en todos los archivos del directorio lorem-copy. 
+* Find every appearance of the **string** `et` in `at.txt` located at lorem. 
 
-## Ficheros bash
+* Find every appearance of the **string** `et` located at the whole lab directory. 
 
-Manual vi: https://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/
 
-Cualquier comando o comandos de bash se pueden almacenar en un fichero y ejecutar cuando queramos. 
-Obviamente puedes utilizar tu editor preferido. Creamos el fichero: 
+## Bash files
+
+Any bash command can be save in a file and be executed from it anytime (you may use your preferred editor like **nano**. If you feel smart and strong **vi** is also an option: https://www.howtogeek.com/102468/a-beginners-guide-to-editing-text-files-with-vi/).
+
+Lets create the bash file: 
 ```
 $ vi list_files.sh
 ```
 
-E incluimos el contenido que queramos. En este caso listar ficheros:
+And include commands, for instance, the list files command:
 ```bash
 #!/bin/bash
 ls
 ```
 
-Ejecutamos el script:
+Execute the script:
 ```
 $ bash list_files.sh
 ```
 
-Y veremos por consola el siguiente output. 
+We'll see the following output. 
 ```console
 exercices  inputs  lorem  lorem-copy  modules  outputs  README.md
 ```
 
+
 ## Bonus
 
-* Almacena en una variable `name` tu nombre.
+* Load your name in the variable `name`.
 
-* Imprime esa variable.
+* Print that variable.
 
-* Crea un directorio nuevo que se llame como el contenido de la variable `name`.
+* Create a folder named after the variable `name`.
 
-* Elimina ese directorio. 
+* Delete that folder. 
 
-* Por cada archivo dentro de la carpeta `lorem` imprime el número de carácteres que tienen sus nombres. 
-Intenta primero mostrar los archivos mediante un bucle for 
-    1. Imprime los ficheros
-    2. Imprime las longitudes de los nombres de los ficheros
-    3. Imprime outputs con la siguiente estructura: `lorem has 5 characters lenght`
+* For every folder in `lorem` print the total number of characters of every file name. 
+Try using a **for** loop to show every file name.  
+    1. Print every file.
+    2. Print the number of characters of every file name.
+    3. Print the number of characters of every file name with the following format: `lorem has 5 characters lenght`
 
-* Muestra los procesos de forma jerárquica que se están ejecutando en tu ordenador:
-    1. Usando el comando top o htop
-    2. Usando el comando ps con argumentos
+* Show the system processes being executed (show them hierarchically):
+    1. Using top or htop commands.
+    2. Using ps command with arguments.
 
-* Muestra información sobre tu procesador por pantalla
+* Show processor info on screen.
 
-* Crea 3 alias y haz que estén disponibles cada vez que inicias sesión
+* Create 3 new alias and make them available everytime you login your session.
 
-* Comprime las carpetas lorem y lorem-copy en un archivo llamado lorem-compressed.tar.gz
+* Compress lorem and lorem-copy folders in a file named lorem-compressed.tar.gz
 
-* Descomprime el archivo lorem-compressed.tar.gz en la carpeta lorem-uncompressed
+* Uncompress lorem-compressed.tar.gz in lorem-uncompressed folder.
