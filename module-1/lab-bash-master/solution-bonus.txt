@@ -1,0 +1,11 @@
+name="Julen"
+echo $name
+mkdir $name
+rm -r $name
+for i in $(find lorem/ -type f); do j=`basename $i .txt`; k=`echo -n $j | wc -m` ; echo $j has $k characters lenght; done
+top
+ps -e
+tar -czf lorem-compressed.tar.gz lorem/ lorem-copy/
+mk dir lorem-uncompressed
+tar -xzvf lorem-compressed.tar.gz --directory lorem-uncompressed
+
