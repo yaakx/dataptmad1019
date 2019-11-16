@@ -3,7 +3,7 @@ import numpy as np
 
 
 #2. Print the NUMPY version and the configuration.
-print(np.version.version, "\n")
+print("\n", np.version.version, "\n")
 print(np.show_config(), "\n")
 
 
@@ -27,7 +27,7 @@ print('b = \n', b, "\n")
 
 #7. Do a and b have the same size? How do you prove that in Python code?
 print("They don't have the same size")
-print(a.shape == b.shape, "\n")
+print("a.shape == b.shape : ", a.shape == b.shape, "\n")
 
 
 
@@ -35,11 +35,11 @@ print(a.shape == b.shape, "\n")
 try:
     print(a+b)
 except ValueError:
-    print("You can't they have different dimensions.")
+    print("You can't, they have different dimensions.\n")
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
 c = np.transpose(b, (1, 2, 0))
-print('B transposed = \n', b, "\n")
+print('B transposed (c) = \n', c, "\n")
 """In the tuple you have to say how to rearrange the axis."""
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
