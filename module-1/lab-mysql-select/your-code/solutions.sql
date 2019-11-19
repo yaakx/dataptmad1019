@@ -30,27 +30,33 @@ ORDER BY COUNT(titles.title) DESC, authors.au_fname, authors.au_lname
 
 SELECT authors.au_id AS "AUTHOR ID", 
 authors.au_lname AS "LAST NAME", authors.au_fname AS "FIRST NAME",
-COUNT(titles.title) AS "TOTAL"
+SUM(sales.qty) AS "TOTAL"
 FROM authors
 JOIN titleauthor
 ON titleauthor.au_id = authors.au_id
 JOIN titles
 ON titles.title_id = titleauthor.title_id
+JOIN sales
+ON sales.title_id = titles.title_id
 GROUP BY authors.au_fname, authors.au_lname
-ORDER BY COUNT(titles.title) DESC
+ORDER BY SUM(sales.qty) DESC
 LIMIT 3;
+
 
 /*Challenge 4 - Best Selling Authors Ranking */
 
 SELECT authors.au_id AS "AUTHOR ID", 
 authors.au_lname AS "LAST NAME", authors.au_fname AS "FIRST NAME",
-COUNT(titles.title) AS "TOTAL"
+SUM(sales.qty) AS "TOTAL"
 FROM authors
 LEFT JOIN titleauthor
 ON titleauthor.au_id = authors.au_id
 LEFT JOIN titles
 ON titles.title_id = titleauthor.title_id
+LEFT JOIN sales
+ON sales.title_id = titles.title_id
 GROUP BY authors.au_fname, authors.au_lname
-ORDER BY COUNT(titles.title) DESC;
+ORDER BY SUM(sales.qty) DESC;	
+
 
 
