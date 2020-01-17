@@ -7,6 +7,7 @@ Lets practice with `bash`, a programming language that executes in the command l
 ...but first things first, create a `solution.txt` file where you will write every command that you will use during this lab.
 
 
+
 ## Setup
 
 1. Locate at ../lab-bash-master folder. Execute `ls` 
@@ -19,6 +20,7 @@ $ ls
 exercices  inputs  lorem  lorem-copy  modules  outputs  README.md
 ```
 3. Try to solve all exercises without changing folders. 
+
 
 
 ## Exercises
@@ -57,11 +59,12 @@ exercices  inputs  lorem  lorem-copy  modules  outputs  README.md
 
 * Count the number of **files** which name starts with `lorem` located at the whole lab directory.
 
-* Find every appearance of `et` in `at.txt` located at lorem.
+* Count the number of times `et` appears in `at.txt` located at lorem.
 
-* Find every appearance of the **string** `et` in `at.txt` located at lorem. 
+* Count the number of times the **string** `et` appears in `at.txt` located at lorem.
 
-* Find every appearance of the **string** `et` located at the whole lab directory. 
+* Count the number of times the **string** `et` appears in every file located at lorem-copy.
+
 
 
 ## Bash files
@@ -88,6 +91,7 @@ We'll see the following output.
 ```console
 exercices  inputs  lorem  lorem-copy  modules  outputs  README.md
 ```
+
 
 
 ## Bonus
